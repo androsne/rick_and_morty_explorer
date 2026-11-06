@@ -26,7 +26,7 @@
                 aria-pressed="${c}"
               >
                 <img 
-                  src="/img/icon_rick_button.svg" 
+                  src="/rick_and_morty_explorer/img/icon_rick_button.svg" 
                   alt="" 
                   class="favorite_icon"
                 />
