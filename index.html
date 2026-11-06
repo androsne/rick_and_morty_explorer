@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/rick_and_morty_explorer/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore the Rick and Morty universe. Discover characters, locations and episodes."
+    />
+    <title>Rick and Morty Explorer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/rick_and_morty_explorer/assets/index-Cfyy9Tnw.js"></script>
+    <link rel="stylesheet" crossorigin href="/rick_and_morty_explorer/assets/index-Dd5vSfS0.css">
+  </head>
+
+  <body>
+    <div class="body_container">
+      <header class="header">
+        <div class="header_container">
+          <a href="#characters" class="logo" aria-label="Home">
+            <img src="/rick_and_morty_explorer/img/rick_and_morty.svg" alt="Rick and Morty" />
+          </a>
+
+          <nav class="navbar" aria-label="Main Navigation">
+            <ul class="nav_list">
+              <li>
+                <a
+                  href="#characters"
+                  class="nav_link active"
+                  aria-current="page"
+                  >Characters</a
+                >
+              </li>
+              <li><a href="#episodes" class="nav_link">Episodes</a></li>
+              <li><a href="#locations" class="nav_link">Locations</a></li>
+              <li><a href="#favourites" class="nav_link">Favourites</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main class="main">
+        <div class="content_header">
+          <div class="content_intro">
+            <h1 id="section_title">Characters</h1>
+            <p id="section_description">
+              Explore the multiverse and meet the weird, wonderful, and
+              downright bizarre characters of Rick and Morty.
+            </p>
+          </div>
+
+          <div class="search_container">
+            <label for="search_input" class="visually_hidden">
+              Search characters
+            </label>
+            <input
+              type="search"
+              id="search_input"
+              placeholder="Search characters"
+            />
+          </div>
+        </div>
+
+        <section class="filters" aria-label="Character Filters">
+          <select id="status_filter" aria-label="Filter by status">
+            <option value="">All statuses</option>
+            <option value="alive">Alive</option>
+            <option value="dead">Dead</option>
+            <option value="unknown">Unknown</option>
+          </select>
+
+          <select id="species_filter" aria-label="Filter by species">
+            <option value="">All species</option>
+            <option value="Alien">Alien</option>
+            <option value="Animal">Animal</option>
+            <option value="Cronenberg">Cronenberg</option>
+            <option value="Disease">Disease</option>
+            <option value="Human">Human</option>
+            <option value="Humanoid">Humanoid</option>
+            <option value="Mythological Creature">Mythological Creature</option>
+            <option value="Poopybutthole">Poopybutthole</option>
+            <option value="Robot">Robot</option>
+            <option value="unknown">Unknown</option>
+          </select>
+
+          <select id="gender_filter" aria-label="Filter by gender">
+            <option value="">All genders</option>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+            <option value="genderless">Genderless</option>
+            <option value="unknown">Unknown</option>
+          </select>
+
+          <button id="reset_filters" class="reset_button" type="button">
+            <img
+              src="/rick_and_morty_explorer/img/icon_portal.png"
+              alt=""
+              class="reset_icon"
+            />
+            <span>Reset Filters</span>
+          </button>
+        </section>
+
+        <section id="content_area" aria-live="polite"></section>
+
+        <div id="pagination" class="pagination"></div>
+      </main>
+
+      <footer class="footer">
+        <div class="footer_container">
+          <div class="footer_top">
+            <p>
+              © 2026 Rick and Morty Explorer · Developed by
+              <span class="footer_author">Andreas Osnes</span>
+            </p>
+
+            <p>
+              Powered by
+              <a
+                href="https://rickandmortyapi.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Rick and Morty API
+              </a>
+            </p>
+          </div>
+
+          <div class="footer_tech">
+            <span>Built with</span>
+            <span class="tech_badge">HTML5</span>
+            <span class="tech_badge">CSS3</span>
+            <span class="tech_badge">JavaScript</span>
+            <span class="tech_badge">Vite</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- CARD MODAL -->
+    <dialog id="card_modal" class="card_modal">
+      <button
+        id="modal_close"
+        class="modal_close"
+        type="button"
+        aria-label="Close details"
+      >
+        &times;
+      </button>
+
+      <div id="modal_content"></div>
+    </dialog>
+  </body>
+</html>
